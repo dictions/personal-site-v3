@@ -2,7 +2,6 @@ var gulp = require('gulp');
 var ghPages = require('gulp-gh-pages');
 
 gulp.task('deploy', function() {
-	return gulp.src('./public/**/*')
-	.pipe(file('CNAME', 'ianwillia.ms'))
+	return gulp.src(['./public/**/*', './CNAME'])
 	.pipe(ghPages());
 });
