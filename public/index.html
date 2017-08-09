@@ -5,27 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ian Alexander Williams | Designer and Software Engineer</title>
 <style>
-@font-face {
-	font-family: 'klang';
-	src: url('assets/klang.woff') format('woff');
-	font-style: normal;
-	font-weight: 400;
-}
-
 .clearfix:after {
 	content: "";
 	display: table;
 	clear: both;
 }
 
-a {
-	color: #333;
-	text-decoration: none;
-	border-bottom: 3px solid rgb(211,211,255);
+html {
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+	font-size: 14px;
+	line-height: 1.5em;
+	background: #121212;
+	color: white;
+	max-width: 400px;
+	padding: 10px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-.header {
-	color: rgb(211,211,255);
+h1, h2 {
+	font-size: 1rem;
+	font-weight: 600;
+	margin: 0;
+	color: #c4c4ff;
 }
 
 ul {
@@ -35,78 +37,86 @@ ul {
 }
 
 ul, p {
-	margin: 0 0 1em;
+	margin: 0 0 1.5em;
 }
 
-ul.left {
-	float:left;
+a {
+	color: white;
+	opacity: 0.6;
+	transition: 200ms;
+	text-decoration: underline;
 }
 
-ul.right {
-	float:right;
-	text-align: right;
+a:hover {
+	opacity: 1;
+	color: #c4c4ff;
+	transition: 0ms;
 }
 
-html {
-	font-family: 'klang', sans-serif;
-	font-size: 18px;
-	line-height: 1.5em;
-	background: #fffbf5;
-	color: #333333;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+.callout:before {
+	content: '⚡️';
+	font-size: 0.75em;
+	margin-left: -1.25em;
+	padding-right: 0.25em;
 }
 
-.callout {
-	background: rgb(211,211,255);
-	display: inline-block;
-	padding: 0.25em 0.25em 0;
-	border-radius: 3px;
-	color: blue
-}
-
-@media (min-width: 500px) {
+@media (min-width: 600px) {
 	html {
-		font-size: 24px;
+		margin: 2rem;
+	}
+}
+
+@media (min-width: 800px) {
+	html {
+		margin: 6rem 4rem;
+		font-size: 18px;
 		max-width: 600px;
-		padding: 0 5px;
-		margin: 4rem auto 8rem;
 	}
 }
 
-@media (min-width: 1000px) {
-	html {
-		font-size: 32px;
-		max-width: 800px;
-		padding: 0 10px;
-		margin: 8rem auto;
-	}
-	
-	a:hover {
-		color: blue;
-		border-color: blue;
-	}
-}
 </style>
 </head>
 <body>
-	<p class="callout">⚡️ MONO MONO is available for new projects Fall 2017.</p>
-	<header class="clearfix">
-		<ul class="left">
-			<li class="header">Contact</li>
-			<li><a href="tel:540-521-1086">540.521.1086</a></li>
-			<li><a href="mailto:me@ianwillia.ms">me@ianwillia.ms</a></li>
-			<li><a href="http://monomono.studio">monomono.studio</a></li>
-		</ul>
-		<ul class="right">
-			<li class="header">Work</li>
-			<li><a href="http://work.ianwillia.ms">Work Archive</a></li>
-			<li><a href="https://dribbble.com/ian_dot_exe">Dribbble</a></li>
-		</ul>
-	</header>
 	<main>
-		<p>Ian Williams is a designer and software engineer living and working in Appalachia. Thus far, he has collaborated with companies and individuals in different capacities to solve complex challenges and meet business goals. His work is tailored, thoughtful, and kind. He doesn’t believe in empty trends and likes to solve for problems at their roots. He has a taste for experimentation and making himself uncomfortable.</p>
+		<h1>Ian Williams</h1>
+		<p>
+			<a href="mailto:me@ianwillia.ms">me@ianwillia.ms</a> ✦ <a href="http://monomono.studio">monomono.studio</a> ✦ <a href="https://twitter.com/ian_dot_exe">twitter</a>
+		</p>
+	
+		<p>Hi there, my name is Ian Williams. I'm a designer and software engineer living and working in Appalachia. I work with companies and individuals in different capacities to solve their business problems. Most often, that is in the digital space: UX, UI, branding, development, strategy. </p>
+		
+		<h2 class="callout">Availability</h2>
+		<p>I have the good fortune of being booked solid until 2018. I'm always available to talk about future collaborations, and I might even be able to point you to one of my good friends. <a href="mailto:me@ianwillia.ms">Don't be shy.</a></p>
+		
+		<h2>Work</h2>
+		<p>I maintain an archive of past work <a href="http://work.ianwillia.ms">here</a>, and you can find less formal bits and bobs <a href="https://dribbble.com/ian_dot_exe">here</a>.</p>
+		
+		<p>I'm also currently working on a software project with my friend <a href="http://lookintothebeam.com/">Matt Reyer</a> called Tapwater. Our goal is to make the communication process of working on long standing projects easier and more transparent. This will be released in the coming months.</p>
+		
+		<h2>Mono Mono</h2>
+		<p>I am one half of a design practice with my friend Garrett DeRossett that sometimes takes on client work. We play, we experiment, and we're always making it up as we go.</p>
+		<p>
+			<a href="http://monomono.studio">monomono.studio</a>
+		</p>
+		
+		<h2>CV</h2>
+		<p>
+			MONO MONO — Partner (2016-Present)
+			<br>
+			Tiz — Product Designer &amp; Frontend Developer (2016-2017)
+			<br>
+			Chute — Frontend Developer (2015-2016)
+			<br>
+			Contract Work (2015-Present)
+			<br>
+			Authentic F&amp;F — Designer &amp; Developer (2014)
+			<br>
+			The Roanoke Times — Web Designer (2013)
+			<br>
+			Acute Designs — Designer &amp; Embroiderer (2011-2013)
+		</p>
 	</main>
+	
 	<script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
