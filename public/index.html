@@ -10,38 +10,103 @@
 		font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
 		font-size: 24px;
 		line-height: 1.5em;
-		background: #121212;
-		color: white;
 		max-width: 400px;
 		padding: 10px;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 	}
 
-	h1 {
+	h1, h2 {
 		font-weight: 600;
 		margin: 0;
-		color: white;
+		color: #808080;
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
 		font-size: 0.75rem;
 	}
 
-	h1, p {
+	h1, h2, p {
 		margin: 0;
 	}
 
-	a {
-		color: white;
-		opacity: 0.6;
-		transition: opacity 200ms ease-in-out, color 200ms ease-in-out;
-		text-decoration: underline;
+	p {
+		margin-bottom: 1.5rem;
 	}
 
-	a:hover {
-		opacity: 1;
-		color: #c4c4ff;
+	a {
+		color: black;
+		text-decoration: none;
+		border-bottom: 2px dotted currentColor;
+		transition: color 150ms ease-in-out;
+	}
+
+	a:hover,
+	a:focus {
+		color: #808080;
 		transition: 0ms;
+	}
+
+	a:visited {
+		color: #808080;
+	}
+
+	a:hover:visited,
+	a:focus:visited {
+		color: black;
+		transition: 0ms;
+	}
+
+	ul {
+		list-style-type: none;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		font-size: 0;
+		line-height: 0;
+	}
+
+	li {
+		font-size: 24px;
+		line-height: 1.5em;
+		margin-bottom: 1.5em;
+		vertical-align: top;
+	}
+
+	.mt3 {
+		margin-top: 3em;
+	}
+
+	.tile {
+		display: block;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		left: -3%;
+		transition: 300ms transform cubic-bezier(0, 0, 0, 1);
+	}
+
+	.tile a,
+	.tile img {
+		display: block;
+		width: 100%;
+		height: auto;
+		border: none;
+	}
+
+	.tile:hover,
+	.tile:focus {
+		transform: translate3d(0, -10px, 0);
+	}
+
+	.tile:hover:after,
+	.tile:focus:after {
+		content: '';
+		display: block;
+		position: absolute;
+		height: 10px;
+		top: 100%;
+		left: 0;
+		right: 0;
 	}
 
 	@media (min-width: 600px) {
@@ -53,7 +118,25 @@
 	@media (min-width: 800px) {
 		html {
 			margin: 6rem 4rem;
-			max-width: 600px;
+			max-width: 1200px;
+		}
+
+		li {
+			display: inline-block;
+			width: calc(50% - 1rem);
+			padding-right: 1rem;
+		}
+
+		.content-container {
+			max-width: 400px;
+		}
+	}
+
+	@media (min-width: 1200px) {
+		.tile {
+			width: 500px;
+			height: 319px;
+			left: -4%;
 		}
 	}
 
@@ -65,12 +148,10 @@
 	}
 
 	@media (max-width: 799px) {
-		p a {
-			display: block;
-		}
-
 		p span {
-			display: none;
+			display: block;
+			font-size: 0;
+			line-height: 0;
 		}
 	}
 
@@ -80,8 +161,255 @@
 	<main>
 		<h1>Ian Hatcher-Williams</h1>
 		<p>
-			<a href="mailto:ian@gardener.nyc">ian@gardener.nyc</a> <span>✦</span> <a href="http://gardener.nyc">gardener.nyc</a> <span>✦</span> <a href="https://twitter.com/ian_dot_exe">twitter</a> <span>✦</span> <a href="https://instagram.com/ian_dot_exe">instagram</a>
+			<a href="mailto:ian@gardener.nyc">ian@gardener.nyc</a> <span>✦</span> <a target="_blank" href="http://gardener.nyc">gardener.nyc</a> <span>✦</span> <a target="_blank" href="https://twitter.com/ian_dot_exe">twitter</a> <span>✦</span> <a target="_blank" href="https://instagram.com/ian_dot_exe">instagram</a> <span>✦</span> <a target="_blank" href="https://www.linkedin.com/in/ian-dot-exe/">linkedin</a>
 		</p>
+
+		<p>solo technology consultant doing business in new york city.</p>
+
+		<h2 class="mt3">Recent Work</h2>
+
+		<ul>
+			<li>
+				<div class="content-container">
+					<div class="tile">
+						<a target="_blank" href="https://beamtlc.com">
+							<img
+								src="/content/beam.png"
+							/>
+						</a>
+					</div>
+					<p>
+						<a target="_blank" href="https://beamtlc.com">beamtlc.com</a><br/>
+						headless bigcommerce & craftcms, deployed to netlify. with alright studio.
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="content-container">
+					<div class="tile">
+						<a target="_blank" href="https://dno.la">
+							<img
+								src="/content/dno.png"
+							/>
+						</a>
+					</div>
+					<p>
+						<a target="_blank" href="https://dno.la">dno.la</a><br/>
+						shopify with custom editorial run on craftcms. with alright studio.
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="content-container">
+					<div class="tile">
+						<a target="_blank" href="https://porterdog.com">
+							<img
+								src="/content/porter.png"
+							/>
+						</a>
+					</div>
+					<p>
+						<a target="_blank" href="https://porterdog.com">porterdog.com</a><br/>
+						shopify + recharge with custom diet quiz. with alright studio.
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="content-container">
+					<div class="tile">
+						<a target="_blank" href="https://huckberry.com">
+							<img
+								src="/content/huckberry.png"
+							/>
+						</a>
+					</div>
+					<p>
+						<a target="_blank" href="https://huckberry.com">huckberry.com</a><br/>
+						isomorphic react + solidus. with bondfire inc. and friends of the web.
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="content-container">
+					<div class="tile">
+						<a target="_blank" href="https://redroostercoffee.com/shop/subscriptions/the-fix">
+							<img
+								src="/content/the-fix.png"
+							/>
+						</a>
+					</div>
+					<p>
+						<a target="_blank" href="https://redroostercoffee.com/shop/subscriptions/the-fix">the fix</a><br/>
+						headless shopify, recharge, craftcms. with alright studio.
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="content-container">
+					<div class="tile">
+						<a target="_blank" href="https://curistrelief.com">
+							<img
+								src="/content/curist.png"
+							/>
+						</a>
+					</div>
+					<p>
+						<a target="_blank" href="https://curistrelief.com">curistrelief.com</a><br/>
+						shopify + recharge with custom symptom quiz. with alright studio.
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="content-container">
+					<div class="tile">
+						<a target="_blank" href="https://statebags.com">
+							<img
+								src="/content/statebags.png"
+							/>
+						</a>
+					</div>
+					<p>
+						<a target="_blank" href="https://statebags.com">statebags.com</a> (customize)<br/>
+						shopify + vue.js. with bondfire inc.
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="content-container">
+					<div class="tile">
+						<a target="_blank" href="https://wearemarble.org">
+							<img
+								src="/content/marble.png"
+							/>
+						</a>
+					</div>
+					<p>
+						<a target="_blank" href="https://wearemarble.org">wearemarble.org</a><br/>
+						lottie + physics.js. with unicef, alright studio, and jkr.
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="content-container">
+					<div class="tile">
+						<a target="_blank" href="https://kenkashi.com">
+							<img
+								src="/content/kenkashi.png"
+							/>
+						</a>
+					</div>
+					<p>
+						<a target="_blank" href="https://kenkashi.com">kenkashi.com</a><br/>
+						static, deployed to netlify. with alright studio.
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="content-container">
+					<div class="tile">
+						<a target="_blank" href="https://materialkitchen.com">
+							<img
+								src="/content/material-kitchen.png"
+							/>
+						</a>
+					</div>
+					<p>
+						<a target="_blank" href="https://materialkitchen.com">materialkitchen.com</a><br/>
+						shopify. with bondfire inc.
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="content-container">
+					<div class="tile">
+						<a target="_blank" href="https://metavari.com">
+							<img
+								src="/content/metavari.png"
+							/>
+						</a>
+					</div>
+					<p>
+						<a target="_blank" href="https://metavari.com">metavari.com</a><br/>
+						static + preact. with alright studio.
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="content-container">
+					<div class="tile">
+						<a target="_blank" href="https://fintech.io">
+							<img
+								src="/content/fintech.png"
+							/>
+						</a>
+					</div>
+					<p>
+						<a target="_blank" href="https://fintech.io">fintech.io</a><br/>
+						craftcms + react. with alright studio.
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="content-container">
+					<div class="tile">
+						<a target="_blank" href="https://swallowtailtea.com">
+							<img
+								src="/content/swallowtail.png"
+							/>
+						</a>
+					</div>
+					<p>
+						<a target="_blank" href="https://swallowtailtea.com">swallowtailtea.com</a><br/>
+						shopify + product photography. with alright studio.
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="content-container">
+					<div class="tile">
+						<a target="_blank" href="https://1017gin.com">
+							<img
+								src="/content/1017.png"
+							/>
+						</a>
+					</div>
+					<p>
+						<a target="_blank" href="https://1017gin.com">1017gin.com</a><br/>
+						static, deployed to netlify. with alright studio.
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="content-container">
+					<div class="tile">
+						<a target="_blank" href="https://redroostercoffee.com">
+							<img
+								src="/content/red-rooster.png"
+							/>
+						</a>
+					</div>
+					<p>
+						<a target="_blank" href="https://redroostercoffee.com">redroostercoffee.com</a><br/>
+						headless shopify, recharge, craftcms. with alright studio.
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="content-container">
+					<div class="tile">
+						<a target="_blank" href="http://other-studio.com">
+							<img
+								src="/content/other-studio.png"
+							/>
+						</a>
+					</div>
+					<p>
+						<a target="_blank" href="http://other-studio.com">other-studio.com</a><br/>
+						headless shopify + craftcms. with alright studio.
+					</p>
+				</div>
+			</li>
+		</ul>
 	</main>
 	
 	<script>
